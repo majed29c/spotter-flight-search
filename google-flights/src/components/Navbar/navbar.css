@@ -1,0 +1,153 @@
+.navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 12px;
+    margin: 1rem auto;
+    width: 100%;
+    flex-wrap: wrap; 
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    width: 10rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar-elements {
+    display: flex;
+    gap: 1.8rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    color: #2d3436;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.nav-button:hover {
+    color: #007bff;
+    background: rgba(0, 123, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.nav-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover::after {
+    width: 70%;
+    left: 15%;
+}
+
+.buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-self: center;
+    padding-right: 1rem;
+    margin-right: 1rem;
+}
+
+.signup-button {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.7rem;
+    margin-right: 1rem;
+    width: 7rem;
+    height: auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    transform: scale(1.1); 
+    background-color: #007bff; 
+    color: white; 
+}
+
+.signin-button{
+    color: black;
+    font-size: 1rem;
+    font-weight:600;
+}
+.signin-button:hover{  
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 1rem 2rem;
+        gap: 2rem;
+        flex-direction: column; 
+    }
+
+    .navbar-elements {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .buttons {
+        justify-content: center;
+        margin-left: 0; 
+    }
+
+    .logo {
+        width: 15vw; 
+    }
+}
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem; 
+    }
+
+    .logo {
+        width: 20vw; 
+    }
+
+    .navbar-elements {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column; 
+        gap: 1rem;
+    }
+}
