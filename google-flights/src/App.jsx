@@ -6,6 +6,11 @@ function App() {
   return (
     <>
     <Navbar />  
+    <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="wave"></div>
     </>
   )
 }
