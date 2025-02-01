@@ -1,0 +1,94 @@
+.flights-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+.flightimage{
+    width: 70%;
+    height: 60vh;
+}
+  
+.flight-search-box {
+
+    background: #212329;
+    color: silver;
+    padding: 15px;
+    margin-top: 2vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .search-fields {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .flight-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    width: 10vw;
+    background-color: silver;
+  }
+  
+  .swap-icon {
+    color: silver;
+    font-size: 18px;
+  }
+  
+  .explore-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: silver;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .mobileflightimage{
+    width: 75%;
+    height: 60vh;
+  }
+   .date-inputs{
+    display: flex;
+    flex-direction:row;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  .text-inputs{
+    display: flex;
+    flex-direction:row;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+@media  screen and (max-width:889px) {
+  .search-fields{
+    flex-direction: column;
+  }
+    
+}

@@ -3,17 +3,18 @@ import './navbar.css';
 import logo from '../../assets/SKYQUESTL.png';
 import { FaPlane, FaGlobe, FaSuitcase, FaHotel, FaHome, FaBars, FaTimes, FaUser, FaUserPlus } from "react-icons/fa"; 
 import classNames from 'classnames'; 
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [toggled, setToggled] = useState(false);
   const [active, setActive] = useState("Flights");
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 890);
   const [isAnimate, setIsAnimate] = useState(false);
   const [isAnimateClose, setIsAnimateClose] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 800);
+      setIsMobile(window.innerWidth < 890);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -44,24 +45,15 @@ const Navbar = () => {
         </div>
         {!isMobile && (
           <div className="navbar-elements">
-            <button
-              className={`nav-button ${active === "Travel" ? "active" : ""}`}
-              onClick={() => setActive("Travel")}
-            >
+            <NavLink to="/travel" className={`nav-button ${active === "Travel" ? "active" : ""}`} onClick={() => setActive("Travel")}>
               <FaSuitcase /> Travel
-            </button>
-            <button
-              className={`nav-button ${active === "Explore" ? "active" : ""}`}
-              onClick={() => setActive("Explore")}
-            >
+            </NavLink>
+            <NavLink to="/explore" className={`nav-button ${active === "Explore" ? "active" : ""}`} onClick={() => setActive("Explore")}>
               <FaGlobe /> Explore
-            </button>
-            <button
-              className={`nav-button ${active === "Flights" ? "active" : ""}`}
-              onClick={() => setActive("Flights")}
-            >
+            </NavLink>
+            <NavLink to="/flights" className={`nav-button ${active === "Flights" ? "active" : ""}`} onClick={() => setActive("Flights")}>
               <FaPlane /> Flights
-            </button>
+            </NavLink>
             <button
               className={`nav-button ${active === "Hotels" ? "active" : ""}`}
               onClick={() => setActive("Hotels")}

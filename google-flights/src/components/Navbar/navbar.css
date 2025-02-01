@@ -3,10 +3,8 @@
     display: flex;
     align-items: center;
     gap: 3vw;
-    border-radius: 12px;
-    margin: 1rem auto;
     width: 100%;
-    flex-wrap: wrap;
+    border-bottom: 1px solid silver;
 }
 
 .navbar-logo {
@@ -31,14 +29,13 @@
     gap: 2vw;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .nav-button {
     display: flex;
 
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     background: #2d3436;
     box-shadow: 10px;
     border: 1px solid #ddd;
@@ -50,6 +47,7 @@
     border-radius: 50px;
     font-weight: 500;
     position: relative;
+    text-decoration: none;
 }
 
 .nav-button:hover {
@@ -117,6 +115,11 @@
         transform: translateX(100%);
     }
 }
+.navbar-container {
+  
+    border-bottom: 0px solid silver;
+}
+
 
 .close-menu {
     display: flex;
@@ -192,7 +195,7 @@ background: rgba(0, 123, 255, 0.1);
     color: #007bff;
     }
 
-@media (max-width: 800px) {
+@media (max-width: 889px) {
     .navbar-container {
         margin: 0;
     }
