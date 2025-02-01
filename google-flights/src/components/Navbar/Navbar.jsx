@@ -76,13 +76,13 @@ const Navbar = () => {
             </button>
           </div>
         )}
-        <div className="menu">
+        <div className="menu-container">
           <FaBars className="menu-icon" onClick={handleMenu} />
         </div>
       </div>
 
-      {toggled && isMobile && (
-        <div className={classNames("mobile-menu", { "animate": isAnimate }, { "animate-close": isAnimateClose })}>
+      {toggled && (
+        <div className={classNames("menu", { "animate": isAnimate }, { "animate-close": isAnimateClose })}>
           <div className="close-menu">
             <FaTimes className="close-icon" onClick={closeMenu} />
           </div>
@@ -102,7 +102,6 @@ const Navbar = () => {
             <li className="nav-item" onClick={() => setActive("Vacation Rentals")}>
               <FaHome /> Vacation Rentals
             </li>
-            {/* Sign In and Sign Up items */}
             <li className="nav-item sign-in" onClick={() => setActive("Sign In")}>
               <FaUser /> Sign In
             </li>
@@ -112,6 +111,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+      
     </>
   );
 };
