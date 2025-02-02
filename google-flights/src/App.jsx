@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Flights from './components/Flights/Flights'
 import { useEffect } from 'react';
+import Signup from './containers/Signup/Signup';
 function App() {
   
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Flights/>} />
         <Route path='/flights' element={<Flights />} />
+        <Route path='/signup' element={<Signup/>} />
       </Routes>
       
     </Router>

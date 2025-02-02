@@ -64,7 +64,7 @@ const Navbar = () => {
               className={`nav-button ${active === "Vacation Rentals" ? "active" : ""}`}
               onClick={() => setActive("Vacation Rentals")}
             >
-              <FaHome /> Vacation Rentals
+              <FaHome /> Vacation
             </button>
           </div>
         )}
@@ -97,9 +97,11 @@ const Navbar = () => {
             <li className="nav-item sign-in" onClick={() => setActive("Sign In")}>
               <FaUser /> Sign In
             </li>
+            <NavLink to="signup">
             <li className="nav-item sign-up" onClick={() => setActive("Sign Up")}>
               <FaUserPlus /> Sign Up
             </li>
+            </NavLink>
           </ul>
         </div>
       )}
